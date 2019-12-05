@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My Recipes</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+</head>
+
+<body>
+    <input type="text" id="ingredientInput" placeholder="What ingredient do you want to use?" />
+    <button onclick=getRecipes() id="button">Search!</button>
+    <div class="recipes-container"></div>
+    <script id="container-template" type="text/x-handlebars-template">
+        {{#each data}}
+            <div class="recipe">
+                <a href="{{href}}" class="title">{{title}}</a>
+                <div class="content">
+                <div class="imgcontainer">
+                    <img class="image" src="{{thumbnail}}" >
+                </div> 
+                <div class="list"> 
+                    <div>Ingredients:</div>
+                        <ul >
+                            {{#each this.ingredients}}
+                            <li>{{this}}</li>
+                            {{/each}}
+                        </ul>
+                </div>
+            </div>       
+        </div>
+        {{/each}}
+    </script>
+
+    <script src="./handlebars/dist/handlebars.js"></script>
+    <script src="./jquery/dist/jquery.js"></script>
+    <script src="render.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
