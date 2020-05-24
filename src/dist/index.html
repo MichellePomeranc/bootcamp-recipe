@@ -10,8 +10,9 @@
 </head>
 
 <body>
+    <h3>SEARCH YOUR FAVORITE RECIPES</h3>
     <input type="text" id="ingredientInput" placeholder="What ingredient do you want to use?" />
-    <button onclick=getRecipes() id="button">Search!</button>
+    <button onclick=getRecipes() id="button">Search</button>
     <div class="recipes-container"></div>
     <script id="container-template" type="text/x-handlebars-template">
         {{#each data}}

@@ -25,12 +25,14 @@ body {
     border: 1px solid black;
     border-radius: 2px;
     resize: vertical;
+    background-color: rgb(231, 218, 144);
 }
 
 .recipe {
-    background-color: rgb(252, 198, 81);
+    background-color: rgb(231, 218, 144);
     margin: 5px;
     padding: 3px;
+    border: 1px solid black
 }
 
 img {
@@ -38,6 +40,12 @@ img {
     height: auto;
     background-color: blanchedalmond;
     display: block;
-    margin: auto;
+    margin: 10px;
     box-shadow: 2px 2px gray;
+}
+
+.title {
+    font-size: 20px;
+    color: black;
+    font-weight: bold;
 }
